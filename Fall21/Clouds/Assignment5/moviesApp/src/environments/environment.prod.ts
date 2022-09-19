@@ -1,13 +1,3 @@
-export const environment = {
-  production: true,
-  firebaseConfig : {
-    apiKey: "AIzaSyAwzc1vfJUMu9xspfYlZe5fLRh1R0U55Pw",
-    authDomain: "my-first-project-1c27e.firebaseapp.com",
-    databaseURL: "https://my-first-project-1c27e-default-rtdb.firebaseio.com",
-    projectId: "my-first-project-1c27e",
-    storageBucket: "my-first-project-1c27e.appspot.com",
-    messagingSenderId: "830915908932",
-    appId: "1:830915908932:web:7d63432192c4cb8c887311",
-    measurementId: "G-E4L24H1FS3"
-  }
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:b37f2a2aa73427d17964464c5a5a32152720632bc70684060df32dac44cf4d0b
+size 496

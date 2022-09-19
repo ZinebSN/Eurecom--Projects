@@ -1,11 +1,3 @@
-package simpledb;
-
-import java.lang.Exception;
-
-/** Exception that is thrown when a deadlock occurs. */
-public class DeadlockException extends Exception {
-    private static final long serialVersionUID = 1L;
-
-    public DeadlockException() {
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5be54ccee371403dcf248b6080bd5ec71c48971fa75bcaaddc262cdc6640e174
+size 250

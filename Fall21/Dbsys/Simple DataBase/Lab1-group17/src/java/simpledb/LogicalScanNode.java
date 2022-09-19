@@ -1,19 +1,3 @@
-package simpledb;
-
-/** A LogicalScanNode represents table in the FROM list in a
- * LogicalQueryPlan */
-public class LogicalScanNode {
-
-    /** The name (alias) of the table as it is used in the query */
-    public String alias;
-
-    /** The table identifier (can be passed to {@link Catalog#getDatabaseFile})
-     *   to retrieve a DbFile */
-    public int t;
-
-    public LogicalScanNode(int table, String tableAlias) {
-        this.alias = tableAlias;
-        this.t = table;
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:02a87d2202458940d463bb5cb5ad59af8f0651734c93397a815236e2af0bcde1
+size 486

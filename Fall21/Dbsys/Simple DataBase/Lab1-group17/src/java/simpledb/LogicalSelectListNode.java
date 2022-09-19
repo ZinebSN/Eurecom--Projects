@@ -1,19 +1,3 @@
-package simpledb;
-
-/** A LogicalSelectListNode represents a clause in the select list in
- * a LogicalQueryPlan
-*/
-public class LogicalSelectListNode {
-    /** The field name being selected; the name may be (optionally) be
-     * qualified with a table name or alias.
-     */
-    public String fname;
-   
-    /** The aggregation operation over the field (if any) */
-    public String aggOp;
-
-    public LogicalSelectListNode(String aggOp, String fname) {
-        this.aggOp = aggOp;
-        this.fname = fname;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4225dd682be94dc412595587b07dbcbfbde80290507ad8152ef205f84bb259d5
+size 518

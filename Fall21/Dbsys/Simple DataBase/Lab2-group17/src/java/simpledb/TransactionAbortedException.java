@@ -1,11 +1,3 @@
-package simpledb;
-
-import java.lang.Exception;
-
-/** Exception that is thrown when a transaction has aborted. */
-public class TransactionAbortedException extends Exception {
-    private static final long serialVersionUID = 1L;
-
-    public TransactionAbortedException() {
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c0ccbfbd6f12a26f5b4e6e2eb4ac5974c27b218a3924df56f3dd82a025b51597
+size 278

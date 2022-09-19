@@ -1,14 +1,3 @@
-package simpledb;
-import java.util.Vector;
-
-/** Class returned by {@link JoinOptimizer#computeCostAndCardOfSubplan} specifying the
-    cost and cardinality of the optimal plan represented by plan.
-*/
-public class CostCard {
-    /** The cost of the optimal subplan */
-    public double cost;
-    /** The cardinality of the optimal subplan */
-    public int card;
-    /** The optimal subplan */
-    public Vector<LogicalJoinNode> plan;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d4d9d1dc35a3ca0bc77177638dfa007cbaeb0ca1fcbf93dc2ea7142747de2b8
+size 436

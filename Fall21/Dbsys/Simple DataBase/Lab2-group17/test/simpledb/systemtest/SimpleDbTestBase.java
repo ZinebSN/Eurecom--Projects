@@ -1,20 +1,3 @@
-package simpledb.systemtest;
-
-import org.junit.Before;
-
-import simpledb.Database;
-
-/**
- * Base class for all SimpleDb test classes. 
- * @author nizam
- *
- */
-public class SimpleDbTestBase {
-	/**
-	 * Reset the database before each test is run.
-	 */
-	@Before	public void setUp() throws Exception {					
-		Database.reset();
-	}
-	
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:21b1712dff955ac7114bc847829a6537c8e723e5df46cd03614483c67896daea
+size 327

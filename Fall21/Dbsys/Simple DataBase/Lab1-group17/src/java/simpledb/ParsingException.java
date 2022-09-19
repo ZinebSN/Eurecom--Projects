@@ -1,17 +1,3 @@
-package simpledb;
-import java.lang.Exception;
-
-public class ParsingException extends Exception {
-    public ParsingException(String string) {
-        super(string);
-    }
-
-    public ParsingException(Exception e) {
-        super(e);
-    }
-
-    /**
-     *
-     */
-    private static final long serialVersionUID = 1L;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c0a93ecc2d31f7e4647a13066b2506243a1054340bede5fb1cbb217b2d391c68
+size 318

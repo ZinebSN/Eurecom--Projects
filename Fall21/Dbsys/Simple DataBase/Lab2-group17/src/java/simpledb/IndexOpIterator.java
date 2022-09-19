@@ -1,20 +1,3 @@
-package simpledb;
-import java.util.*;
-
-/** IndexDBIterator is the interface that index access methods
-    implement in SimpleDb.
-*/
-public interface IndexOpIterator extends OpIterator {
-    /** Open the access method such that when getNext is called, it
-        iterates through the tuples that satisfy ipred.
-        @param ipred The predicate that is used to scan the index.
-    */
-    public void open(IndexPredicate ipred)
-        throws NoSuchElementException, DbException, TransactionAbortedException;
-
-    /** Begin a new index scan with the specified predicate.
-        @param ipred The predicate that is used to scan the index.
-    */
-    public void rewind(IndexPredicate ipred)
-        throws DbException, TransactionAbortedException;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:57caa98640db4f0f59213e0aa1145b97d5988850eee6d12da1883ddab71d903a
+size 748

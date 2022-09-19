@@ -1,21 +1,3 @@
-import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
-import { MoviesService } from './movies.service';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class SecurePagesGuard implements CanActivate {
-  constructor(private moviesService:MoviesService,
-    private router:Router){};
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if(this.moviesService.userSignedIn()){
-        this.router.navigate(["dashboard"]);
-      }
-    return true;
-  }
-  
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ad2f58340b57d36cbd32801786dfece3f3604ed5d09943f315b7afe6955a1c79
+size 701

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D>
+  <head><!--Import note:  the following meta tags were created during
+      Vrml97ToX3d translation.  Please update or delete them as
+      appropriate.--><meta content="vrmlTP.x3d" name="filename"/>
+    <meta
+      content="*enter description here, short-sentence summaries preferred*" name="description"/>
+    <meta content="*enter name of original author here*" name="author"/>
+    <meta content="Xeena VRML importer" name="translator"/>
+    <meta content="*enter date of initial version here*" name="created"/>
+    <meta content="22 octobre 2002" name="imported"/>
+    <meta content="*enter date of latest revision here*" name="revised"/>
+    <meta content="*enter version here*" name="version"/>
+    <meta
+      content="*enter reference citation or relative/online url here*" name="reference"/>
+    <meta
+      content="*enter additional url/bibliographic reference information here*" name="reference"/>
+    <meta
+      content="*enter copyright information here* Example: Copyright (c) Web3D Consortium Inc. 2001" name="copyright"/>
+    <meta content="*enter drawing filename/url here*" name="drawing"/>
+    <meta content="*enter image filename/url here*" name="image"/>
+    <meta content="*enter movie filename/url here*" name="movie"/>
+    <meta content="*enter photo filename/url here*" name="photo"/>
+    <meta content="*enter keywords here*" name="keywords"/>
+    <meta content="*enter online url address for this file here*" name="url"/>
+    <meta
+      content="X3D-Edit, http://www.web3D.org/TaskGroups/x3d/translation/README.X3D-Edit.html" name="generator"/>
+    <meta content="Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html" name="generator"/>
+  </head>
+  <Scene>
+    <NavigationInfo/><!--Import note:  Scene graph nodes are added
+      here--><Transform DEF="center">
+      <Transform DEF="sun">
+        <Transform DEF="spin_sun">
+          <Shape DEF="sun_sphere">
+            <Sphere radius="50"/>
+            <Appearance>
+              <FillProperties/>
+              <ImageTexture url="sun.gif"/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform DEF="Rotat_mars">
+          <Transform DEF="trans_mars" translation="270.0 0 0">
+            <Transform DEF="spin_mars">
+              <Shape>
+                <Sphere radius="4.0"/>
+                <Appearance>
+                  <FillProperties/>
+                  <ImageTexture url="mars.gif"/>
+                </Appearance>
+              </Shape>
+            </Transform>
+          </Transform>
+        </Transform>
+        <Transform DEF="Rotat_mercury">
+          <Transform DEF="trans_mercury" translation="120.0 0 0">
+            <Transform DEF="spin_mercury">
+              <Shape>
+                <Sphere radius="2.5"/>
+                <Appearance>
+                  <FillProperties/>
+                  <ImageTexture url="mercure.gif"/>
+                </Appearance>
+              </Shape>
+            </Transform>
+          </Transform>
+        </Transform>
+        <Transform DEF="Rotat_jupiter">
+          <Transform DEF="trans_jupiter" translation="330. 0 0 ">
+            <Transform DEF="spin_jupiter">
+              <Shape>
+                <Sphere radius="10.0"/>
+                <Appearance>
+                  <FillProperties/>
+                  <ImageTexture url="jupiter.gif"/>
+                </Appearance>
+              </Shape>
+            </Transform>
+          </Transform>
+        </Transform>
+        <Transform DEF="Rotat_saturn">
+          <Transform DEF="trans_saturn" translation="360.0 0 0">
+            <Transform DEF="spin_saturn">
+              <Shape>
+                <Sphere radius="6.0"/>
+                <Appearance>
+                  <FillProperties/>
+                  <ImageTexture url="saturn.gif"/>
+                </Appearance>
+              </Shape>
+            </Transform>
+          </Transform>
+        </Transform>
+        <Transform DEF="earth">
+          <Transform DEF="trans_earth" translation="220.0 0 0 ">
+            <Transform DEF="Rotat_moon">
+              <Transform DEF="Trans_moon" translation="10.0 0 0">
+                <Transform DEF="spin_moon">
+                  <Shape DEF="moon">
+                    <Sphere radius="1.0"/>
+                    <Appearance>
+                      <FillProperties/>
+                      <ImageTexture url="moon.gif"/>
+                    </Appearance>
+                  </Shape>
+                </Transform>
+              </Transform>
+            </Transform>
+            <Transform DEF="spin_earth">
+              <Shape DEF="sphere">
+                <Sphere radius="5.0"/>
+                <Appearance>
+                  <FillProperties/>
+                  <ImageTexture url="terre.gif"/>
+                </Appearance>
+              </Shape>
+            </Transform>
+          </Transform>
+        </Transform>
+      </Transform>
+    </Transform>
+    <Group DEF="anim">
+      <Group DEF="anim_terre">
+        <TimeSensor DEF="time_terre" cycleInterval="2" enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_terre" key="0 0.5 1" keyValue="0 1 0 0 , 0 1 0 3.14 , 0 1 0 6.28"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_terre"
+          toField="set_fraction" toNode="rotation_terre"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_terre"
+          toField="set_rotation" toNode="spin_earth"/>
+        <TimeSensor DEF="time_earth_sun" cycleInterval="15.0"
+          enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_earth_sun" key="0 0.5 1" keyValue="0 1 0 0,0 1 0 3.14, 0 1 0 6.28"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_earth_sun"
+          toField="set_fraction" toNode="rotation_earth_sun"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_earth_sun"
+          toField="set_rotation" toNode="earth"/>
+      </Group>
+      <Group DEF="anim_moon">
+        <TimeSensor DEF="time_moon" cycleInterval="5.0" enabled="true" loop="true"/>
+        <TimeSensor DEF="time_moon_earth" cycleInterval="6.0"
+          enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_moon" key="0 0.5 1" keyValue="0 1 0 0 , 0 1 0 3.14 , 0 1 0 6.28"/>
+        <OrientationInterpolator DEF="rotation_moon_earth" key="0 0.5 1" keyValue="0 1 0 0 ,0 1 0 3.14 , 0 1 0 6.28&#10;"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_moon"
+          toField="set_fraction" toNode="rotation_moon"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_moon"
+          toField="set_rotation" toNode="spin_moon"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_moon_earth"
+          toField="set_fraction" toNode="rotation_moon_earth"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_moon_earth"
+          toField="set_rotation" toNode="Rotat_moon"/>
+      </Group>
+      <Group DEF="anim_sun">
+        <TimeSensor DEF="time_sun" cycleInterval="5.0" enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_sun" key="0 0.5 1" keyValue="0 1 0 0, 0 1 0 3.14, 0 1 0 6.28 "/>
+        <ROUTE fromField="fraction_changed" fromNode="time_sun"
+          toField="set_fraction" toNode="rotation_sun"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_sun"
+          toField="set_rotation" toNode="spin_sun"/>
+      </Group>
+      <Group DEF="anim_mercury">
+        <TimeSensor DEF="time_mercury_sun" cycleInterval="10.0"
+          enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_mercury_sun"
+          key="0 0.5 1" keyValue="0 1 0 0,  0 1 0 3.14, 0 1 0 6.28"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_mercury_sun"
+          toField="set_fraction" toNode="rotation_mercury_sun"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_mercury_sun"
+          toField="set_rotation" toNode="Rotat_mercury"/>
+        <TimeSensor DEF="time_mercury" cycleInterval="3.0"
+          enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_mercury" key="0 0.5 1" keyValue="0 1 0 0, 0 1 0 3.14, 0 1 0 6.28"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_mercury"
+          toField="set_fraction" toNode="rotation_mercury"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_mercury"
+          toField="set_rotation" toNode="spin_mercury"/>
+      </Group>
+      <Group DEF="anim_mars">
+        <TimeSensor DEF="time_mars_sun" cycleInterval="20.0"
+          enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_mars_sun" key="0 0.5 1" keyValue="0 1 0 0, 0 1 0 3.14, 0 1 0 6.28"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_mars_sun"
+          toField="set_fraction" toNode="rotation_mars_sun"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_mars_sun"
+          toField="set_rotation" toNode="Rotat_mars"/>
+        <TimeSensor DEF="time_mars" cycleInterval="2.1" enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_mars" key="0 0.5 1" keyValue="0 1 0 0 , 0 1 0 3.14, 0 1 0 6.28"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_mars"
+          toField="set_fraction" toNode="rotation_mars"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_mars"
+          toField="set_rotation" toNode="spin_mars"/>
+      </Group>
+      <Group DEF="anim_jupiter">
+        <TimeSensor DEF="time_jupiter_sun" cycleInterval="40.0"
+          enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_jupiter_sun"
+          key="0 0.5 1" keyValue="0 1 0 0, 0 1 0 3.14, 0 1 0 6.28"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_jupiter_sun"
+          toField="set_fraction" toNode="rotation_jupiter_sun"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_jupiter_sun"
+          toField="set_rotation" toNode="Rotat_jupiter"/>
+        <TimeSensor DEF="time_jupiter" cycleInterval="1.1"
+          enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_jupiter" key="0 0.5 1" keyValue="0 1 0 0, 0 1 0 3.14, 0 1 0 6.28"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_jupiter"
+          toField="set_fraction" toNode="rotation_jupiter"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_jupiter"
+          toField="set_rotation" toNode="spin_jupiter"/>
+      </Group>
+      <Group DEF="anim_saturn">
+        <TimeSensor DEF="time_saturn_sun" cycleInterval="100.0"
+          enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_saturn_sun" key="0 0.5 1" keyValue="0 1 0 0, 0 1 0 3.14, 0 1 0 6.28"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_saturn_sun"
+          toField="set_fraction" toNode="rotation_saturn_sun"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_saturn_sun"
+          toField="set_rotation" toNode="Rotat_saturn"/>
+        <TimeSensor DEF="time_saturn" cycleInterval="1.0" enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_saturn" key="0 0.5 1" keyValue="0 1 0 0,0 1 0 3.14, 0 1 0 6.28"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_saturn"
+          toField="set_fraction" toNode="rotation_saturn"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_saturn"
+          toField="set_rotation" toNode="spin_saturn"/>
+      </Group>
+    </Group>
+  </Scene>
+</X3D>

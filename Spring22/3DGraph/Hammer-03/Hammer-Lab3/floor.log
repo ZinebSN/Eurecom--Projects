@@ -1,0 +1,254 @@
+hlcsg 3.4 SSE 2 V2.0 (Mar 29 2009)
+Zoner's Half-Life Compilation Tools -- Custom Build
+Based on code modifications by Sean 'Zoner' Cavanaugh
+Based on Valve's version, modified with permission.
+Submit detailed bug reports to (amckern@yahoo.com)
+-----  BEGIN  hlcsg -----
+Command line: C:\packages\ZHLT\hlcsg.exe \\homes\senane\3d-graph,labs\hammer-lab3\floor -nowadtextures 
+Entering \\homes\senane\3d-graph,labs\hammer-lab3\floor.map
+
+Current hlcsg Settings
+Name                 |  Setting  |  Default
+---------------------|-----------|-------------------------
+threads               [       4 ] [  Varies ]
+verbose               [     off ] [     off ]
+log                   [      on ] [      on ]
+developer             [       0 ] [       0 ]
+chart                 [     off ] [     off ]
+estimate              [     off ] [     off ]
+max texture memory    [ 4194304 ] [ 4194304 ]
+max lighting memory   [ 6291456 ] [ 6291456 ]
+priority              [  Normal ] [  Normal ]
+
+noclip                [     off ] [     off ]
+null texture stripping[      on ] [      on ]
+clipnode economy mode [      on ] [      on ]
+clip hull type        [  legacy ] [  legacy ]
+onlyents              [     off ] [     off ]
+wadtextures           [     off ] [      on ]
+skyclip               [      on ] [      on ]
+hullfile              [    None ] [    None ]
+nullfile              [    None ] [    None ]
+min surface area      [   0.500 ] [   0.500 ]
+brush union threshold [   0.000 ] [   0.000 ]
+
+Using mapfile wad configuration
+Wadinclude list :
+[zhlt.wad]
+
+0 brushes (totalling 0 sides) discarded from clipping hulls
+CreateBrush:
+ (0.18 seconds)
+SetModelCenters:
+ (0.00 seconds)
+CSGBrush:
+ (0.77 seconds)
+
+Using Wadfile: \packages\Valve_Hammer_Editor\hl\cstrike.wad
+ - Contains 0 used textures, 0.00 percent of map (123 textures in wad)
+Using Wadfile: \packages\Valve_Hammer_Editor\hl\decals.wad
+ - Contains 0 used textures, 0.00 percent of map (223 textures in wad)
+Using Wadfile: \packages\Valve_Hammer_Editor\hl\halflife.wad
+ - Contains 24 used textures, 100.00 percent of map (3116 textures in wad)
+Using Wadfile: \packages\Valve_Hammer_Editor\hl\office.wad
+ - Contains 0 used textures, 0.00 percent of map (6 textures in wad)
+
+added 1 additional animating textures.
+Texture usage is at 0.24 mb (of 4.00 mb MAX)
+1.07 seconds elapsed
+
+-----   END   hlcsg -----
+
+
+
+hlbsp 3.4 SSE 2 V2.0 (Mar 29 2009)
+Zoner's Half-Life Compilation Tools -- Custom Build
+Based on code modifications by Sean 'Zoner' Cavanaugh
+Based on Valve's version, modified with permission.
+Submit detailed bug reports to (amckern@yahoo.com)
+-----  BEGIN  hlbsp -----
+Command line: C:\packages\ZHLT\hlbsp.exe \\homes\senane\3d-graph,labs\hammer-lab3\floor 
+
+Current hlbsp Settings
+Name               |  Setting  |  Default
+-------------------|-----------|-------------------------
+threads             [       4 ] [  Varies ]
+verbose             [     off ] [     off ]
+log                 [      on ] [      on ]
+developer           [       0 ] [       0 ]
+chart               [     off ] [     off ]
+estimate            [     off ] [     off ]
+max texture memory  [ 4194304 ] [ 4194304 ]
+priority            [  Normal ] [  Normal ]
+
+noclip              [     off ] [     off ]
+nofill              [     off ] [     off ]
+noopt               [     off ] [     off ]
+null tex. stripping [      on ] [      on ]
+notjunc             [     off ] [     off ]
+subdivide size      [     240 ] [     240 ] (Min 64) (Max 512)
+max node size       [    1024 ] [    1024 ] (Min 64) (Max 8192)
+
+
+SolidBSP [hull 0] 500...1000...1500...2000...2500...3000...3500...4000...4397 (0.19 seconds)
+BSP generation successful, writing portal file '\\homes\senane\3d-graph,labs\hammer-lab3\floor.prt'
+SolidBSP [hull 1] 500...1000...1500...1990 (0.08 seconds)
+SolidBSP [hull 2] 500...1000...1427 (0.05 seconds)
+SolidBSP [hull 3] 500...1000...1500...2000...2500...2789 (0.15 seconds)
+5.06 seconds elapsed
+
+-----   END   hlbsp -----
+
+
+
+hlvis 3.4 SSE 2 V2.0 (Mar 29 2009)
+Zoner's Half-Life Compilation Tools -- Custom Build
+Based on code modifications by Sean 'Zoner' Cavanaugh
+Based on Valve's version, modified with permission.
+Submit detailed bug reports to (amckern@yahoo.com)
+-----  BEGIN  hlvis -----
+Command line: C:\packages\ZHLT\hlvis.exe \\homes\senane\3d-graph,labs\hammer-lab3\floor 
+2734 portalleafs
+10162 numportals
+
+-= Current hlvis Settings =-
+Name               |  Setting  |  Default
+-------------------|-----------|-------------------------
+threads             [       4 ] [  Varies ]
+verbose             [     off ] [     off ]
+log                 [      on ] [      on ]
+developer           [       0 ] [       0 ]
+chart               [     off ] [     off ]
+estimate            [     off ] [     off ]
+max texture memory  [ 4194304 ] [ 4194304 ]
+max vis distance    [       0 ] [       0 ]
+priority            [  Normal ] [  Normal ]
+
+fast vis            [     off ] [     off ]
+full vis            [     off ] [     off ]
+
+
+BasePortalVis:
+ (1.61 seconds)
+LeafThread:
+ (53.81 seconds)
+Warning: Leaf portals saw into leaf
+    Problem at portal between leaves 226 and 258:
+       (1326.893 315.917 -20.000)
+    (1392.501 265.119 13.249)
+    (1392.500 265.000 13.250)
+    (1326.000 265.000 -20.000)
+
+Warning: Leaf portals saw into leaf
+    Problem at portal between leaves 463 and 495:
+       (1301.893 -457.083 -28.000)
+    (1367.501 -507.881 5.249)
+    (1367.500 -508.000 5.250)
+    (1301.000 -508.000 -28.000)
+
+average leafs visible: 225
+g_visdatasize:141354  compressed from 935028
+55.60 seconds elapsed
+
+-----   END   hlvis -----
+
+
+
+hlrad 3.4 SSE 2 V2.0 (Mar 29 2009)
+Zoner's Half-Life Compilation Tools -- Custom Build
+Based on code modifications by Sean 'Zoner' Cavanaugh
+Based on Valve's version, modified with permission.
+Submit detailed bug reports to (amckern@yahoo.com)
+-----  BEGIN  hlrad -----
+Command line: C:\packages\ZHLT\hlrad.exe \\homes\senane\3d-graph,labs\hammer-lab3\floor -bounce 3 
+
+-= Current hlrad Settings =-
+Name                | Setting             | Default
+--------------------|---------------------|-------------------------
+threads              [                 4 ] [            Varies ]
+verbose              [               off ] [               off ]
+log                  [                on ] [                on ]
+developer            [                 0 ] [                 0 ]
+chart                [               off ] [               off ]
+estimate             [               off ] [               off ]
+max texture memory   [           4194304 ] [           4194304 ]
+max lighting memory  [           6291456 ] [           6291456 ]
+priority             [            Normal ] [            Normal ]
+
+vismatrix algorithm  [          Original ] [          Original ]
+oversampling (-extra)[               off ] [               off ]
+bounces              [                 3 ] [                 1 ]
+bounce dynamic light [                on ] [                on ]
+ambient light        [ 0.000 0.000 0.000 ] [ 0.000 0.000 0.000 ]
+maximum light        [           255.000 ] [           256.000 ]
+circus mode          [               off ] [               off ]
+
+smoothing threshold  [            50.000 ] [            50.000 ]
+direct threshold     [            25.000 ] [            25.000 ]
+direct light scale   [             2.000 ] [             2.000 ]
+coring threshold     [             1.000 ] [             1.000 ]
+patch interpolation  [                on ] [                on ]
+
+texscale             [                on ] [                on ]
+patch subdividing    [                on ] [                on ]
+chop value           [            64.000 ] [            64.000 ]
+texchop value        [            32.000 ] [            32.000 ]
+
+global fade          [             1.000 ] [             1.000 ]
+global falloff       [                 2 ] [                 2 ]
+global light scale   [ 1.000 1.000 1.000 ] [ 1.000 1.000 1.000 ]
+global gamma         [ 0.500 0.500 0.500 ] [ 0.500 0.500 0.500 ]
+global light scale   [             1.000 ] [             1.000 ]
+global sky diffusion [             1.000 ] [             1.000 ]
+
+opaque entities      [                on ] [                on ]
+sky lighting fix     [                on ] [                on ]
+incremental          [               off ] [               off ]
+dump                 [               off ] [               off ]
+
+colour jitter        [       0.0 0.0 0.0 ] [       0.0 0.0 0.0 ]
+monochromatic jitter [       0.0 0.0 0.0 ] [       0.0 0.0 0.0 ]
+softlight hack       [   0.0 0.0 0.0 0.0 ] [   0.0 0.0 0.0 0.0 ]
+diffuse hack         [                on ] [                on ]
+spotlight points     [                on ] [                on ]
+
+custom shadows with bounce light
+                     [               off ] [               off ]
+rgb transfers        [               off ] [               off ]
+
+
+[Reading texlights from 'C:\packages\ZHLT\lights.rad']
+[59 texlights parsed from 'C:\packages\ZHLT\lights.rad']
+
+7007 faces
+Create Patches : 21112 base patches
+0 opaque faces
+119723 square feet [17240210.00 square inches]
+10 direct lights
+
+BuildFacelights:
+ (1.44 seconds)
+visibility matrix   :  26.6 megs
+BuildVisLeafs:
+ (1.28 seconds)
+MakeScales:
+ (0.94 seconds)
+SwapTransfers:
+ (0.14 seconds)
+Transfer Lists :     8729660 :    8.73M transfers
+       Indices :     6858760 :    6.54M bytes
+          Data :    34918640 :   33.30M bytes
+GatherLight:
+ (0.06 seconds)
+GatherLight:
+ (0.08 seconds)
+GatherLight:
+ (0.07 seconds)
+FinalLightFace:
+ (0.08 seconds)
+4.26 seconds elapsed
+
+-----   END   hlrad -----
+
+
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D>
+  <head><!--Import note:  the following meta tags were created during
+      Vrml97ToX3d translation.  Please update or delete them as
+      appropriate.--><meta content="vrmlTP.x3d" name="filename"/>
+    <meta
+      content="*enter description here, short-sentence summaries preferred*" name="description"/>
+    <meta content="*enter name of original author here*" name="author"/>
+    <meta content="Xeena VRML importer" name="translator"/>
+    <meta content="*enter date of initial version here*" name="created"/>
+    <meta content="22 octobre 2002" name="imported"/>
+    <meta content="*enter date of latest revision here*" name="revised"/>
+    <meta content="*enter version here*" name="version"/>
+    <meta
+      content="*enter reference citation or relative/online url here*" name="reference"/>
+    <meta
+      content="*enter additional url/bibliographic reference information here*" name="reference"/>
+    <meta
+      content="*enter copyright information here* Example: Copyright (c) Web3D Consortium Inc. 2001" name="copyright"/>
+    <meta content="*enter drawing filename/url here*" name="drawing"/>
+    <meta content="*enter image filename/url here*" name="image"/>
+    <meta content="*enter movie filename/url here*" name="movie"/>
+    <meta content="*enter photo filename/url here*" name="photo"/>
+    <meta content="*enter keywords here*" name="keywords"/>
+    <meta content="*enter online url address for this file here*" name="url"/>
+    <meta
+      content="X3D-Edit, http://www.web3D.org/TaskGroups/x3d/translation/README.X3D-Edit.html" name="generator"/>
+    <meta content="Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html" name="generator"/>
+  </head>
+  <Scene>
+    <NavigationInfo/><!--Import note:  Scene graph nodes are added
+      here--><Transform DEF="repere_terre">
+      <Transform DEF="earth">
+        <Transform DEF="spin_earth">
+          <Shape DEF="sphere">
+            <Sphere radius="5.0"/>
+            <Appearance>
+              <FillProperties/>
+              <ImageTexture url="terre.gif"/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform DEF="Rotat_moon">
+          <Transform DEF="Trans_moon" translation="10.0 0 0">
+            <Transform DEF="spin_moon">
+              <Shape DEF="moon">
+                <Sphere radius="2.0"/>
+                <Appearance>
+                  <FillProperties/>
+                  <ImageTexture url="moon.gif"/>
+                </Appearance>
+              </Shape>
+            </Transform>
+          </Transform>
+        </Transform>
+      </Transform>
+    </Transform>
+    <Group DEF="anim">
+      <Group DEF="anim_terre">
+        <TimeSensor DEF="time_terre" cycleInterval="10.0" enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_terre" key="0 0.5 1" keyValue="0 1 0 0 , 0 1 0 3.14 , 0 1 0 6.28"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_terre"
+          toField="set_fraction" toNode="rotation_terre"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_terre"
+          toField="set_rotation" toNode="spin_earth"/>
+      </Group>
+      <Group DEF="anim_moon">
+        <TimeSensor DEF="time_moon" cycleInterval="3.0" enabled="true" loop="true"/>
+        <TimeSensor DEF="time_moon_earth" cycleInterval="4.0"
+          enabled="true" loop="true"/>
+        <OrientationInterpolator DEF="rotation_moon" key="0 0.5 1" keyValue="0 1 0 0 , 0 1 0 3.14 , 0 1 0 6.28"/>
+        <OrientationInterpolator DEF="rotation_moon_earth" key="0 1 1" keyValue="0 1 0 0 ,0 1 0 3.14 , 0 1 0 3.14&#10;"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_moon"
+          toField="set_fraction" toNode="rotation_moon"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_moon"
+          toField="set_rotation" toNode="spin_moon"/>
+        <ROUTE fromField="fraction_changed" fromNode="time_moon_earth"
+          toField="set_fraction" toNode="rotation_moon_earth"/>
+        <ROUTE fromField="value_changed" fromNode="rotation_moon_earth"
+          toField="set_rotation" toNode="Rotat_moon"/>
+      </Group>
+    </Group>
+  </Scene>
+</X3D>
